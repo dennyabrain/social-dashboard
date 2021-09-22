@@ -7,22 +7,22 @@ const {
   mentionIncludesSchema,
 } = require("./model/mentions-schema");
 
-async function testModelCreationWithLocalData() {
+async function testModelSaveWithLocalData() {
   const mentionTwitterResponse = require("./mentions.json");
+  const { save } = require("./controller-mentions");
+
   const { data, includes } = mentionTwitterResponse;
 
   const validData = await mentionDataSchema.validateAsync(data);
   const validIncludes = await mentionIncludesSchema.validateAsync(includes);
 
   // const query = await save({}, validData[0], validIncludes.users[0]);
-  i = 2;
+  i = 9;
   const dbModels = adapterTwitterMentionToDbMention(
     validData[i],
     validIncludes.users[i]
   );
-  for (model of dbModels) {
-    console.log(model.constructor.name, model.dataValues);
-  }
+  await save(dbModels);
 }
 
 async function testModelCreationWithRemoteData() {
@@ -48,8 +48,8 @@ async function testModelCreationWithRemoteData() {
 
 (async function test() {
   try {
-    // testModelCreationWithLocalData();
-    testModelCreationWithRemoteData();
+    testModelSaveWithLocalData();
+    // testModelCreationWithRemoteData();
   } catch (err) {
     console.log("TESTS FAILED. ERROR validating user schema");
     console.log(err);

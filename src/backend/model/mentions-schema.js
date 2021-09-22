@@ -18,7 +18,7 @@ const userSchema = Joi.object({
   name: Joi.string().max(TWITTER_USER_NAME_LENGTH),
   description: Joi.string().max(160).allow(""),
   profile_image_url: Joi.string().max(DB_URL_LENGTH),
-  location: Joi.string(),
+  location: Joi.string().default("NA"),
   url: Joi.string().max(DB_URL_LENGTH).allow(""),
   protected: Joi.boolean(),
   username: Joi.string().max(50).required(),
@@ -70,16 +70,16 @@ const entitiesSchema = Joi.object({
 });
 
 const contexAnnotationDomainSchema = Joi.object({
-  id: Joi.string().max(DB_ID_LENGTH).default("NULL"),
-  name: Joi.string().default("NULL"),
-  description: Joi.string().optional().default("NULL"),
-}).default({ id: "NULL", name: "NULL", description: "NULL" });
+  id: Joi.string().max(DB_ID_LENGTH).default("NA"),
+  name: Joi.string().default("NA"),
+  description: Joi.string().optional().default("NA"),
+}).default({ id: "NA", name: "NA", description: "NA" });
 
 const contextAnnotationEntitySchema = Joi.object({
-  id: Joi.string().max(DB_ID_LENGTH).default("NULL"),
-  name: Joi.string().default("NULL"),
-  description: Joi.string().optional().default("NULL"),
-}).default({ id: "NULL", name: "NULL", description: "NULL" });
+  id: Joi.string().max(DB_ID_LENGTH).default("NA"),
+  name: Joi.string().default("NA"),
+  description: Joi.string().optional().default("NA"),
+}).default({ id: "NA", name: "NA", description: "NA" });
 
 const contexAnnotationSchema = Joi.object({
   domain: contexAnnotationDomainSchema,
@@ -92,7 +92,7 @@ exports.mentionDataSchema = Joi.array().items(
     created_at: Joi.date().iso(),
     text: Joi.string().max(500),
     author_id: Joi.string().max(DB_ID_LENGTH),
-    lang: Joi.string().max(2),
+    lang: Joi.string().max(10),
     possibly_sensitive: Joi.boolean(),
     conversation_id: Joi.string().max(25),
     public_metrics: schemaPublicMetric,

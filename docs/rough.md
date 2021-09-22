@@ -21,12 +21,14 @@ INSERT INTO mentioned_tweets VALUES("123127", "2021-09-21T06:56:01.898Z", "2021-
 
 # Conventions
 
-in the database any field prefixed with a "t\_" indicates that this is an id from
-twitter's API and hence can be used for querying detailed objects.
-it is also used to differentiate between standard fields like created_at. for instance
-in a table created_at field would be used to denote the timestamp of when a field
-was created at in this database wherease t_created_at would be used for its created at
-timestamp in twitter's database.
+- in the database any field prefixed with a "t\_" indicates that this is an id from
+  twitter's API and hence can be used for querying detailed objects.
+  it is also used to differentiate between standard fields like created_at. for instance
+  in a table created_at field would be used to denote the timestamp of when a field
+  was created at in this database wherease t_created_at would be used for its created at
+  timestamp in twitter's database.
+- If the database needs a value and its not present in the API response, we store it as "NA".
+  This differentiates an undefined value from an empty string.
 
 # Test
 
@@ -41,3 +43,9 @@ timestamp in twitter's database.
 # Prerequisites
 
 - Knowledge of sql and specifically opearing sqlite3
+
+# Navigating the code :
+
+Definition of Sql Database : service-db.js
+How Twitter API response is transformed into SQL Database' structure : adapter-twitter-to-db.js
+How is the database queried for answers - controller-mention.js
