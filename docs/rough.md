@@ -10,6 +10,10 @@
 # TODO
 
 - [ ] script to initialize table
+- [ ] check queries with timestamps
+- [ ] paginate twitter API
+- [ ] paginate sequelize models
+- [ ] automatically use nanoid for id?
 
 # Snippets
 

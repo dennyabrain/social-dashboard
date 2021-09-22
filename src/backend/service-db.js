@@ -16,8 +16,6 @@ MentionedTweets.init(
     authorName: DataTypes.STRING,
     tConversationId: DataTypes.STRING,
     possiblySensitive: DataTypes.BOOLEAN,
-    authorId: DataTypes.STRING,
-    publicMetricId: DataTypes.STRING,
   },
   { sequelize, modelName: "mentionedTweet" }
 );
@@ -54,12 +52,14 @@ PublicMetrics.init(
   { sequelize, modelName: "publicMetric" }
 );
 
+MentionedTweets.Author = MentionedTweets.belongsTo(Author);
+MentionedTweets.PublicMetrics = MentionedTweets.belongsTo(PublicMetrics);
+
 class EntityMention extends Model {}
 
 EntityMention.init(
   {
     id: { type: DataTypes.STRING, primaryKey: true },
-    mentionTweetId: DataTypes.STRING,
     start: DataTypes.INTEGER,
     end: DataTypes.INTEGER,
     username: DataTypes.STRING,
@@ -73,7 +73,6 @@ class EntityAnnotation extends Model {}
 EntityAnnotation.init(
   {
     id: { type: DataTypes.STRING, primaryKey: true },
-    mentionTweetId: DataTypes.STRING,
     start: DataTypes.INTEGER,
     end: DataTypes.INTEGER,
     probability: DataTypes.INTEGER,
@@ -88,7 +87,6 @@ class EntityURL extends Model {}
 EntityURL.init(
   {
     id: { type: DataTypes.STRING, primaryKey: true },
-    mentionTweetId: DataTypes.STRING,
     url: DataTypes.STRING,
     expandedURL: DataTypes.STRING,
     displayURL: DataTypes.STRING,
@@ -102,7 +100,6 @@ class EntityHashtag extends Model {}
 EntityHashtag.init(
   {
     id: { type: DataTypes.STRING, primaryKey: true },
-    mentionTweetId: DataTypes.STRING,
     start: DataTypes.INTEGER,
     end: DataTypes.INTEGER,
     tag: DataTypes.STRING,
@@ -115,7 +112,6 @@ class ContextAnnotation extends Model {}
 ContextAnnotation.init(
   {
     id: { type: DataTypes.STRING, primaryKey: true },
-    mentionTweetId: DataTypes.STRING,
     domainId: DataTypes.INTEGER,
     domainName: DataTypes.STRING,
     domainDescription: DataTypes.STRING,
@@ -125,6 +121,11 @@ ContextAnnotation.init(
   },
   { sequelize, modelName: "contextAnnotation" }
 );
+MentionedTweets.hasOne(EntityMention);
+MentionedTweets.hasOne(EntityAnnotation);
+MentionedTweets.hasOne(EntityURL);
+MentionedTweets.EntityHashtag = MentionedTweets.hasOne(EntityHashtag);
+MentionedTweets.hasOne(ContextAnnotation);
 
 const setup = async () => {
   await sequelize.authenticate();
