@@ -1,0 +1,650 @@
+{
+  "data": [
+    {
+      "conversation_id": "1439839240527962112",
+      "public_metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0
+      },
+      "entities": {
+        "mentions": [
+          {
+            "start": 0,
+            "end": 13,
+            "username": "bankofbaroda",
+            "id": "4650859756"
+          },
+          {
+            "start": 14,
+            "end": 25,
+            "username": "RuPay_npci",
+            "id": "2375617663"
+          },
+          {
+            "start": 26,
+            "end": 37,
+            "username": "BPCLimited",
+            "id": "2854166772"
+          }
+        ]
+      },
+      "author_id": "2201723958",
+      "id": "1439995204304457728",
+      "possibly_sensitive": false,
+      "created_at": "2021-09-20T16:49:45.000Z",
+      "lang": "hi",
+      "text": "@bankofbaroda @RuPay_npci @BPCLimited क्या चुतिया बनाते हो रोज एक ही बात बोलते हो पर आजतक समाधान नहीं हुआ है आपने तो बिल्कुल ही पागल समज रखा है"
+    },
+    {
+      "conversation_id": "1439839240527962112",
+      "public_metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0
+      },
+      "entities": {
+        "mentions": [
+          {
+            "start": 0,
+            "end": 13,
+            "username": "bankofbaroda",
+            "id": "4650859756"
+          },
+          {
+            "start": 14,
+            "end": 25,
+            "username": "RuPay_npci",
+            "id": "2375617663"
+          },
+          {
+            "start": 26,
+            "end": 37,
+            "username": "BPCLimited",
+            "id": "2854166772"
+          }
+        ]
+      },
+      "author_id": "1336513300830384131",
+      "id": "1439994462604722182",
+      "possibly_sensitive": false,
+      "created_at": "2021-09-20T16:46:48.000Z",
+      "lang": "en",
+      "text": "@bankofbaroda @RuPay_npci @BPCLimited Very poor service in bank of baroda kapodra branch \nNeed to improve"
+    },
+    {
+      "conversation_id": "1435981494116257794",
+      "public_metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0
+      },
+      "entities": {
+        "mentions": [
+          {
+            "start": 0,
+            "end": 13,
+            "username": "bankofbaroda",
+            "id": "4650859756"
+          },
+          {
+            "start": 14,
+            "end": 30,
+            "username": "EkambaramShanti",
+            "id": "1136892538135040000"
+          },
+          {
+            "start": 31,
+            "end": 35,
+            "username": "RBI",
+            "id": "478432912"
+          },
+          {
+            "start": 36,
+            "end": 49,
+            "username": "KotakBankLtd",
+            "id": "350862570"
+          },
+          {
+            "start": 50,
+            "end": 60,
+            "username": "udaykotak",
+            "id": "2572981626"
+          },
+          {
+            "start": 61,
+            "end": 77,
+            "username": "BankofBarodaCEO",
+            "id": "3849579859"
+          }
+        ]
+      },
+      "author_id": "3299137874",
+      "id": "1439993812890365960",
+      "possibly_sensitive": false,
+      "created_at": "2021-09-20T16:44:13.000Z",
+      "lang": "en",
+      "text": "@bankofbaroda @EkambaramShanti @RBI @KotakBankLtd @udaykotak @BankofBarodaCEO Dear Sir/Maam , the amount is still not received yet in correct beneficiary account. Please check"
+    },
+    {
+      "conversation_id": "1439991667554013185",
+      "context_annotations": [
+        {
+          "domain": {
+            "id": "46",
+            "name": "Brand Category",
+            "description": "Categories within Brand Verticals that narrow down the scope of Brands"
+          },
+          "entity": {
+            "id": "781974596731871232",
+            "name": "Banking"
+          }
+        }
+      ],
+      "public_metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0
+      },
+      "entities": {
+        "annotations": [
+          {
+            "start": 200,
+            "end": 202,
+            "probability": 0.702,
+            "type": "Person",
+            "normalized_text": "BoB"
+          }
+        ],
+        "mentions": [
+          {
+            "start": 0,
+            "end": 13,
+            "username": "bankofbaroda",
+            "id": "4650859756"
+          }
+        ]
+      },
+      "author_id": "796449732",
+      "id": "1439991667554013185",
+      "possibly_sensitive": false,
+      "created_at": "2021-09-20T16:35:41.000Z",
+      "lang": "en",
+      "text": "@bankofbaroda  Worst Bank of my life but I don't have any other option. \nthis twitte is just to remind you in future \"you don't help me when I needed\" \neven I maintain current and savings accounts at BoB."
+    },
+    {
+      "conversation_id": "1439991511450468363",
+      "context_annotations": [
+        {
+          "domain": {
+            "id": "46",
+            "name": "Brand Category",
+            "description": "Categories within Brand Verticals that narrow down the scope of Brands"
+          },
+          "entity": {
+            "id": "781974596731871232",
+            "name": "Banking"
+          }
+        },
+        {
+          "domain": {
+            "id": "66",
+            "name": "Interests and Hobbies Category",
+            "description": "A grouping of interests and hobbies entities, like Novelty Food or Destinations"
+          },
+          "entity": {
+            "id": "847888632711061504",
+            "name": "Personal finance",
+            "description": "Personal finance"
+          }
+        },
+        {
+          "domain": {
+            "id": "67",
+            "name": "Interests and Hobbies",
+            "description": "Interests, opinions, and behaviors of individuals, groups, or cultures; like Speciality Cooking or Theme Parks"
+          },
+          "entity": {
+            "id": "847894059859402753",
+            "name": "Credit, debt and loans",
+            "description": "Credit, debt and loans"
+          }
+        }
+      ],
+      "public_metrics": {
+        "retweet_count": 0,
+        "reply_count": 1,
+        "like_count": 0,
+        "quote_count": 0
+      },
+      "entities": {
+        "annotations": [
+          {
+            "start": 24,
+            "end": 28,
+            "probability": 0.9981,
+            "type": "Place",
+            "normalized_text": "India"
+          }
+        ],
+        "mentions": [
+          {
+            "start": 245,
+            "end": 258,
+            "username": "bankofbaroda",
+            "id": "4650859756"
+          },
+          {
+            "start": 259,
+            "end": 275,
+            "username": "BankofBarodaCEO",
+            "id": "3849579859"
+          }
+        ]
+      },
+      "author_id": "2594273179",
+      "id": "1439991511450468363",
+      "possibly_sensitive": false,
+      "created_at": "2021-09-20T16:35:04.000Z",
+      "lang": "en",
+      "text": "Worst banking Sector in India. The bank who is still not able to provide a decent portal where a customer can easily pay its credit card bill, what else we can expect.Worst portal,worst complaint handling staff. Even seniors don't check Emails. @bankofbaroda @BankofBarodaCEO"
+    },
+    {
+      "conversation_id": "1439990783893860352",
+      "context_annotations": [
+        {
+          "domain": {
+            "id": "46",
+            "name": "Brand Category",
+            "description": "Categories within Brand Verticals that narrow down the scope of Brands"
+          },
+          "entity": {
+            "id": "781974596731871232",
+            "name": "Banking"
+          }
+        }
+      ],
+      "public_metrics": {
+        "retweet_count": 0,
+        "reply_count": 1,
+        "like_count": 0,
+        "quote_count": 0
+      },
+      "entities": {
+        "mentions": [
+          {
+            "start": 0,
+            "end": 13,
+            "username": "bankofbaroda",
+            "id": "4650859756"
+          }
+        ]
+      },
+      "author_id": "1050413744319279104",
+      "id": "1439990783893860352",
+      "possibly_sensitive": false,
+      "created_at": "2021-09-20T16:32:11.000Z",
+      "lang": "en",
+      "text": "@bankofbaroda bank BC/BF support"
+    },
+    {
+      "conversation_id": "1439988721361715208",
+      "public_metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0
+      },
+      "entities": {
+        "annotations": [
+          {
+            "start": 17,
+            "end": 19,
+            "probability": 0.9198,
+            "type": "Person",
+            "normalized_text": "Bob"
+          }
+        ],
+        "mentions": [
+          {
+            "start": 0,
+            "end": 13,
+            "username": "bankofbaroda",
+            "id": "4650859756"
+          }
+        ]
+      },
+      "author_id": "773472669710716928",
+      "id": "1439988721361715208",
+      "possibly_sensitive": false,
+      "created_at": "2021-09-20T16:23:59.000Z",
+      "lang": "en",
+      "text": "@bankofbaroda Is Bob credit card online site down?"
+    },
+    {
+      "conversation_id": "1439063792407617541",
+      "context_annotations": [
+        {
+          "domain": {
+            "id": "10",
+            "name": "Person",
+            "description": "Named people in the world like Nelson Mandela"
+          },
+          "entity": {
+            "id": "1138118463019347969",
+            "name": "Subramanian Swamy"
+          }
+        },
+        {
+          "domain": {
+            "id": "35",
+            "name": "Politician",
+            "description": "Politicians in the world, like Joe Biden"
+          },
+          "entity": {
+            "id": "1138118463019347969",
+            "name": "Subramanian Swamy"
+          }
+        }
+      ],
+      "public_metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0
+      },
+      "entities": {
+        "mentions": [
+          {
+            "start": 0,
+            "end": 13,
+            "username": "bankofbaroda",
+            "id": "4650859756"
+          },
+          {
+            "start": 14,
+            "end": 22,
+            "username": "Swamy39",
+            "id": "60937837"
+          },
+          {
+            "start": 23,
+            "end": 31,
+            "username": "minmsme",
+            "id": "2595957175"
+          },
+          {
+            "start": 32,
+            "end": 45,
+            "username": "PIBIndiaMSME",
+            "id": "1293129693416140800"
+          },
+          {
+            "start": 46,
+            "end": 50,
+            "username": "RBI",
+            "id": "478432912"
+          },
+          {
+            "start": 51,
+            "end": 67,
+            "username": "BankofBarodaCEO",
+            "id": "3849579859"
+          },
+          {
+            "start": 68,
+            "end": 83,
+            "username": "TheOfficialSBI",
+            "id": "2251588934"
+          },
+          {
+            "start": 84,
+            "end": 100,
+            "username": "UnionBankTweets",
+            "id": "787149332449492992"
+          },
+          {
+            "start": 335,
+            "end": 344,
+            "username": "AxisBank",
+            "id": "714003800"
+          },
+          {
+            "start": 346,
+            "end": 356,
+            "username": "HDFC_Bank",
+            "id": "183230213"
+          },
+          {
+            "start": 358,
+            "end": 373,
+            "username": "ICICIBank_Care",
+            "id": "63752206"
+          },
+          {
+            "start": 375,
+            "end": 386,
+            "username": "canarabank",
+            "id": "229351338"
+          }
+        ],
+        "urls": [
+          {
+            "start": 387,
+            "end": 410,
+            "url": "https://t.co/RLGbnqdSb1",
+            "expanded_url": "https://twitter.com/arvindg1970/status/1439987003630575616/photo/1",
+            "display_url": "pic.twitter.com/RLGbnqdSb1"
+          }
+        ],
+        "hashtags": [
+          {
+            "start": 265,
+            "end": 271,
+            "tag": "banks"
+          }
+        ]
+      },
+      "author_id": "4506874100",
+      "id": "1439987003630575616",
+      "possibly_sensitive": false,
+      "created_at": "2021-09-20T16:17:09.000Z",
+      "lang": "en",
+      "text": "@bankofbaroda @Swamy39 @minmsme @PIBIndiaMSME @RBI @BankofBarodaCEO @TheOfficialSBI @UnionBankTweets Appreciate your assurance.\nYr social media team approached me over call too.\nLet’s see how honest u &amp; yr commitment,process &amp; procedure.\nSurprisingly other #banks preferred to keep mum.\nआखें बंद कर लेने से पाप नहीं धुला करते।\n@AxisBank \n@HDFC_Bank \n@ICICIBank_Care \n@canarabank https://t.co/RLGbnqdSb1"
+    },
+    {
+      "conversation_id": "1439975826213138435",
+      "public_metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0
+      },
+      "entities": {
+        "mentions": [
+          {
+            "start": 0,
+            "end": 13,
+            "username": "bankofbaroda",
+            "id": "4650859756"
+          },
+          {
+            "start": 14,
+            "end": 18,
+            "username": "RBI",
+            "id": "478432912"
+          },
+          {
+            "start": 19,
+            "end": 31,
+            "username": "FinMinIndia",
+            "id": "2613904818"
+          },
+          {
+            "start": 32,
+            "end": 46,
+            "username": "bobcreditcard",
+            "id": "1306480670168899586"
+          }
+        ]
+      },
+      "author_id": "851409829423751169",
+      "id": "1439986660515586053",
+      "possibly_sensitive": false,
+      "created_at": "2021-09-20T16:15:48.000Z",
+      "lang": "hi",
+      "text": "@bankofbaroda @RBI @FinMinIndia @bobcreditcard अब ये बाते रहने ही दो। आपकी बैंक ने साबित कर दिया कि यहां ग्राहक की कोई वैल्यू नही। 15 दिनों में आप जवाब नही दे पाए और अब क्या जवाब दोगे?"
+    },
+    {
+      "conversation_id": "1435601072714764298",
+      "public_metrics": {
+        "retweet_count": 0,
+        "reply_count": 1,
+        "like_count": 0,
+        "quote_count": 0
+      },
+      "entities": {
+        "mentions": [
+          {
+            "start": 0,
+            "end": 13,
+            "username": "bankofbaroda",
+            "id": "4650859756"
+          }
+        ]
+      },
+      "author_id": "618914345",
+      "id": "1439986180578156547",
+      "possibly_sensitive": false,
+      "created_at": "2021-09-20T16:13:53.000Z",
+      "lang": "hi",
+      "text": "@bankofbaroda मुझसे अभी तक तो किसी ने भी संपर्क किया नहीं मेरे Application के बाबत\n\nधन्य है आपका संबन्धित concern department\n10 दिन से एक Issue resolve नहीं किया गया\nना emails का उत्तर दिया ना ही आपके द्वारा भरोसा दिलाया गया उस पर कोई कार्य किया"
+    }
+  ],
+  "includes": {
+    "users": [
+      {
+        "verified": false,
+        "id": "2201723958",
+        "name": "Ronak V Pachori",
+        "description": "",
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1401404794003021827/uctANNfe_normal.jpg",
+        "location": "Rajasthan, India",
+        "url": "",
+        "protected": false,
+        "username": "RonakVPachori",
+        "created_at": "2013-11-18T18:04:01.000Z"
+      },
+      {
+        "verified": false,
+        "id": "1336513300830384131",
+        "name": "Dhruv",
+        "description": "",
+        "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+        "url": "",
+        "protected": false,
+        "username": "mysteri0us21",
+        "created_at": "2020-12-09T03:29:55.000Z"
+      },
+      {
+        "verified": false,
+        "id": "3299137874",
+        "name": "khushbu singh",
+        "description": "इस रण की कि मैं खुद ही कृष्ण और खुद ही अर्जुन हू , रोज अपनी  सारथी बनकर जीवन की  महाभारत लड़ती हू...",
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1413200382310850561/hzW6SKSq_normal.jpg",
+        "location": "Gujarat, India",
+        "url": "https://t.co/NXu4PJUxWD",
+        "protected": false,
+        "username": "aroma1770",
+        "created_at": "2015-07-28T04:42:28.000Z"
+      },
+      {
+        "verified": false,
+        "id": "796449732",
+        "name": "Thākūr Shāshāñk Hīñdū (Shabby dx)",
+        "description": "💯FB 24* vigilant by birth gallivant on earth ⭕️ ||freethinker||Bard||Hindu||zinDã|| Life - camera,kitab Action✍️",
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1310456238153461762/hyltCv48_normal.jpg",
+        "location": "Dehradun, India",
+        "url": "https://t.co/ReHENjkI8P",
+        "protected": false,
+        "username": "shashank4440",
+        "created_at": "2012-09-01T16:49:37.000Z"
+      },
+      {
+        "verified": false,
+        "id": "2594273179",
+        "name": "ਹਰਮਨ ਸਿੰਘ ਸੋਹਲ",
+        "description": "‏البساطة هي التطور في نهاية المطاف",
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1214860180287963136/uji0dwiy_normal.jpg",
+        "location": "Amritsar",
+        "url": "",
+        "protected": false,
+        "username": "sohal403",
+        "created_at": "2014-06-29T05:15:44.000Z"
+      },
+      {
+        "verified": false,
+        "id": "1050413744319279104",
+        "name": "Assu ahirwar",
+        "description": "CSC VLE KUMHARI ,DAMOH MP",
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1405493903730515971/uCfdJ4rV_normal.jpg",
+        "location": "Kumhari",
+        "url": "",
+        "protected": false,
+        "username": "AssuAhirwar",
+        "created_at": "2018-10-11T15:52:07.000Z"
+      },
+      {
+        "verified": false,
+        "id": "773472669710716928",
+        "name": "Sourav Mondal",
+        "description": "b Practical wth emotions",
+        "profile_image_url": "https://pbs.twimg.com/profile_images/916512557535444993/IqG9Izlf_normal.jpg",
+        "url": "",
+        "protected": false,
+        "username": "heySourav",
+        "created_at": "2016-09-07T10:47:09.000Z"
+      },
+      {
+        "verified": false,
+        "id": "4506874100",
+        "name": "Arvind Gupta",
+        "description": "Founder-TaxOSolution | Providing solutions in #Business #GST #Tax #Customs #DirectTax. M-9099012410 | 8320836997",
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1091551881329930240/LNL7ROFL_normal.jpg",
+        "location": "Ahmadabad City, India",
+        "url": "https://t.co/MuuHM72O7J",
+        "protected": false,
+        "username": "arvindg1970",
+        "created_at": "2015-12-09T11:36:19.000Z"
+      },
+      {
+        "verified": false,
+        "id": "851409829423751169",
+        "name": "Writer GajendraSingh",
+        "description": "a former Writer",
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1086640754406100992/PlCOTrOi_normal.jpg",
+        "location": "Pali, India",
+        "url": "",
+        "protected": false,
+        "username": "poetgsraj",
+        "created_at": "2017-04-10T12:21:36.000Z"
+      },
+      {
+        "verified": false,
+        "id": "618914345",
+        "name": "Камалрадж Сингх🇮🇳",
+        "description": "Follow me Instagram @Pkr.379\n\n\n             \n\n\nVerified Account® █║▌│█│║▌║││█║▌│║║\nORIGINAL PROFILE ™\nOfficial Twitter™ Handle Copyright Since ©2012-21",
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1152210156354015233/fF7TXNM__normal.jpg",
+        "location": "Jodhpur, India",
+        "url": "https://t.co/DUMQpzmq6n",
+        "protected": false,
+        "username": "Pkr379",
+        "created_at": "2012-06-26T09:44:54.000Z"
+      }
+    ]
+  }
+}
