@@ -97,6 +97,14 @@ exports.getTweets = async (pageNum, condensed) => {
   }
 };
 
+exports.getTweetById = async (id) => {
+  return MentionedTweets.findOne({
+    where: {
+      id,
+    },
+  });
+};
+
 exports.getTweetsByLanguage = async (pageNum, lang) => {
   return MentionedTweets.findAndCountAll({
     offset: pageNum * 5,

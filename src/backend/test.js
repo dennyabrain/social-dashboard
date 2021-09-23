@@ -1,44 +1,19 @@
-const dotenv = require("dotenv");
-dotenv.config();
-const mentionTwitterResponse = require("./mentions.json");
-const {
-  mentionDataSchema,
-  mentionIncludesSchema,
-} = require("./model/mentions-schema");
-const { save } = require("./controller-mentions");
-const DB = require("./service-db");
+const axios = require("axios");
 
-const { data, includes } = mentionTwitterResponse;
+(async function () {
+  // const res = await axios.get("http://localhost:3000/tweets/query", {
+  //   params: {
+  //     type: "hashtag",
+  //     value: "Staff_Shortage_In_Mahabank",
+  //     pg: 0,
+  //   },
+  // });
 
-(async function test() {
-  try {
-    const db = await DB.create();
-    // await db.createTable();
+  // const res = await axios.get("http://localhost:3000/tweets/page/0");
 
-    const validData = await mentionDataSchema.validateAsync(data);
-    const validIncludes = await mentionIncludesSchema.validateAsync(includes);
-    // for (let i = 0; i < validData.length; i++) {
+  const res = await axios.get(
+    "http://localhost:3000/tweet/E5VDE-JX3N3I7nUy4-cBR"
+  );
 
-    // }
-    try {
-      const i = 3;
-      const query = await save({}, validData[i], validIncludes.users[i]);
-      console.log(query);
-      db.getDb().serialize(() => {
-        db.getDb().exec(query, (err) => {
-          if (err) {
-            console.log("ERROR WRITING TO DB");
-            console.log(err);
-          }
-        });
-        console.log(`TEST PASSED : ${i}`);
-      });
-    } catch (err) {
-      console.log(`FAILED query generation for ${i}`);
-      console.log(err);
-    }
-  } catch (err) {
-    console.log("TEST FAILED");
-    console.log(err);
-  }
+  console.log(res.data);
 })();
