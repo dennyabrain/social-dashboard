@@ -3,6 +3,7 @@ const sequelize = new Sequelize({
   dialect: "sqlite",
   storage: "data.db",
 });
+const { create_table_on_startup } = require("./config");
 
 class MentionedTweets extends Model {}
 
@@ -130,6 +131,7 @@ MentionedTweets.hasOne(ContextAnnotation);
 const setup = async () => {
   await sequelize.authenticate();
   console.log("Connection has been established successfully.");
+
   await sequelize.sync({ force: true });
 };
 

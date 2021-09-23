@@ -6,6 +6,7 @@
   eg : @bankofbaroda @Swamy39 @minmsme @PIBIndiaMSME @RBI @BankofBarodaCEO @TheOfficialSBI @UnionBankTweets Appreciate your assurance.\nYr social media team approached me over call too.\nLet’s see how honest u &amp; yr commitment,process &amp; procedure.\nSurprisingly other #banks preferred to keep mum.\nआखें बंद कर लेने से पाप नहीं धुला करते।\n@AxisBank \n@HDFC_Bank \n@ICICIBank_Care \n@canarabank https://t.co/RLGbnqdSb1
   around 480 characters
   tweet id : 1439987003630575616
+- some tweets don't have author objects. maybe deleted?
 
 # TODO
 
@@ -53,3 +54,12 @@ INSERT INTO mentioned_tweets VALUES("123127", "2021-09-21T06:56:01.898Z", "2021-
 Definition of Sql Database : service-db.js
 How Twitter API response is transformed into SQL Database' structure : adapter-twitter-to-db.js
 How is the database queried for answers - controller-mention.js
+
+# Presentation
+
+- show context annotations,
+- show all new fields,
+- review fields later
+  conversations and annotations :
+  link here : https://developer.twitter.com/en/docs/twitter-api/annotations/overview
+-

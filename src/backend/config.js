@@ -1,3 +1,3 @@
 exports.config = {
-  create_table_on_startup: false,
+  create_table_on_startup: true,
 };
