@@ -10,21 +10,15 @@ const {
   getTweetsByHashtag,
   getTweetsByContextAnnotation,
 } = require("./controller-mentions");
-const { ModelMention } = require("./model-mentions");
-const { writeFile } = require("fs/promises");
-const { config } = require("./config");
-const {
-  setup,
-  MentionedTweets,
-  Author,
-  PublicMetrics,
-  EntityURL,
-} = require("./service-db");
-const { nanoid } = require("nanoid");
+const { aggregate } = require("./aggregate-data");
 
+const cors = require("cors");
 const express = require("express");
 const app = express();
 const port = 3000;
+
+app.use(cors());
+app.options("*", cors());
 
 app.get("/", (req, res) => {
   res.send("Financial Dashboard");
@@ -34,13 +28,28 @@ app.get("/tweets/page/:pgNum", async (req, res) => {
   const { pgNum } = req.params;
   const { count, rows } = await getTweets(pgNum, true);
   const minRows = rows.map((row) => row.dataValues);
+  console.log({ count, minRows });
   res.json({ count, rows: minRows });
 });
 
 app.get("/tweet/:id", async (req, res) => {
   const { id } = req.params;
-  const tweet = await getTweetById(id);
-  res.json(tweet.dataValues);
+  const {
+    tweet,
+    entityHashtag,
+    entityAnnotations,
+    entityMentions,
+    entityURL,
+    contextAnnotations,
+  } = await getTweetById(id);
+  res.json({
+    tweet,
+    entityHashtag,
+    entityAnnotations,
+    entityMentions,
+    entityURL,
+    contextAnnotations,
+  });
 });
 
 // /tweets/query?type=language&value=NarendraModi
@@ -52,7 +61,8 @@ app.get("/tweets/query", async (req, res) => {
   switch (type) {
     case "language":
       const tweetsByLang = await getTweetsByLanguage(pg, value);
-      response = { count: tweetsByLang.count, tweets: minRows };
+      const minRowsC = tweetsByLang.rows.map((row) => row.dataValues);
+      response = { count: tweetsByLang.count, tweets: minRowsC };
       break;
     case "hashtag":
       const tweetsByHashTag = await getTweetsByHashtag(pg, value);
@@ -60,15 +70,19 @@ app.get("/tweets/query", async (req, res) => {
       response = { tweets: minRowsA };
       break;
     case "entity":
-      const tweetsByEntity = await getTweetsByHashtag(pg, value);
+      const tweetsByEntity = await getTweetsByContextAnnotation(pg, value);
       const minRowsB = tweetsByEntity.rows.map((row) => row.dataValues);
-      response = { count, tweets: minRowsB };
+      response = { tweets: minRowsB };
       break;
     default:
       response = {};
   }
 
   res.json(response);
+});
+
+app.get("/aggregates/timeseries", async (req, res) => {
+  res.json(aggregate.timeseries_data);
 });
 
 app.listen(port, () => {

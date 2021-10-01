@@ -6,6 +6,9 @@ const {
   PublicMetrics,
   EntityHashtag,
   ContextAnnotation,
+  EntityAnnotation,
+  EntityMention,
+  EntityURL,
 } = require("./service-db");
 const { client } = require("./service-twitter");
 
@@ -98,11 +101,41 @@ exports.getTweets = async (pageNum, condensed) => {
 };
 
 exports.getTweetById = async (id) => {
-  return MentionedTweets.findOne({
+  const tweet = await MentionedTweets.findOne({
     where: {
       id,
     },
+    include: [Author, PublicMetrics],
   });
+  const entityHashtag = await EntityHashtag.findAndCountAll({
+    limit: 20,
+    where: { mentionedTweetId: tweet.id },
+  });
+  const entityAnnotations = await EntityAnnotation.findAndCountAll({
+    limit: 20,
+    where: { mentionedTweetId: tweet.id },
+  });
+  const entityMentions = await EntityMention.findAndCountAll({
+    limit: 20,
+    where: { mentionedTweetId: tweet.id },
+  });
+  const entityURL = await EntityURL.findAndCountAll({
+    limit: 20,
+    where: { mentionedTweetId: tweet.id },
+  });
+  const contextAnnotations = await ContextAnnotation.findAndCountAll({
+    limit: 20,
+    where: { mentionedTweetId: tweet.id },
+  });
+
+  return {
+    tweet: tweet.dataValues,
+    entityHashtag: entityHashtag.rows,
+    entityAnnotations: entityAnnotations.rows,
+    entityMentions: entityMentions.rows,
+    entityURL: entityURL.rows,
+    contextAnnotations: contextAnnotations.rows,
+  };
 };
 
 exports.getTweetsByLanguage = async (pageNum, lang) => {

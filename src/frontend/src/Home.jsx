@@ -1,92 +1,59 @@
-import React from "react";
-import { Box, Heading, Text } from "grommet";
-import { TimeSeries, Index } from "pondjs";
-import {
-  Resizable,
-  ChartContainer,
-  ChartRow,
-  YAxis,
-  Charts,
-  BarChart,
-} from "react-timeseries-charts";
-
-const data = [
-  ["2017-01-24T00:00", 0.01],
-  ["2017-01-24T01:00", 0.13],
-  ["2017-01-24T02:00", 0.07],
-  ["2017-01-24T03:00", 0.04],
-  ["2017-01-24T04:00", 0.33],
-  ["2017-01-24T05:00", 0.2],
-  ["2017-01-24T06:00", 0.08],
-  ["2017-01-24T07:00", 0.54],
-  ["2017-01-24T08:00", 0.95],
-  ["2017-01-24T09:00", 1.12],
-  ["2017-01-24T10:00", 0.66],
-  ["2017-01-24T11:00", 0.06],
-  ["2017-01-24T12:00", 0.3],
-  ["2017-01-24T13:00", 0.05],
-  ["2017-01-24T14:00", 0.5],
-  ["2017-01-24T15:00", 0.24],
-  ["2017-01-24T16:00", 0.02],
-  ["2017-01-24T17:00", 0.98],
-  ["2017-01-24T18:00", 0.46],
-  ["2017-01-24T19:00", 0.8],
-  ["2017-01-24T20:00", 0.39],
-  ["2017-01-24T21:00", 0.4],
-  ["2017-01-24T22:00", 0.39],
-  ["2017-01-24T23:00", 0.28],
-];
-
-const series = new TimeSeries({
-  name: "hilo_rainfall",
-  columns: ["index", "precip"],
-  points: data.map(([d, value]) => [
-    Index.getIndexString("1h", new Date(d)),
-    value,
-  ]),
-});
+import React, { useEffect, useState } from "react";
+import { Box, Heading, Text, DataChart } from "grommet";
+import axios from "axios";
 
 const Home = () => {
+  const [timeseriesData, setTimeseriesData] = useState([]);
+
+  useEffect(async () => {
+    const res = await axios.get("http://localhost:3000/aggregates/timeseries");
+    console.log(res);
+    setTimeseriesData(res.data);
+  }, []);
   return (
     <Box>
-      <Heading level={1}>Home</Heading>
+      <Heading level={3}>Tweet Count Time Series</Heading>
       <Box>
-        <div>
-          <div className="row">
-            <div className="col-md-12">
-              <b>BarChart</b>
-            </div>
-          </div>
-          <hr />
-          <div className="row">
-            <div className="col-md-12">
-              <Resizable>
-                <ChartContainer timeRange={series.range()}>
-                  <ChartRow height="150">
-                    <YAxis
-                      id="rain"
-                      label="Rainfall (inches/hr)"
-                      min={0}
-                      max={1.5}
-                      format=".2f"
-                      width="70"
-                      type="linear"
-                    />
-                    <Charts>
-                      <BarChart
-                        axis="rain"
-                        style={style}
-                        spacing={1}
-                        columns={["precip"]}
-                        series={series}
-                      />
-                    </Charts>
-                  </ChartRow>
-                </ChartContainer>
-              </Resizable>
-            </div>
-          </div>
-        </div>
+        <DataChart
+          alignSelf="start"
+          size={{
+            height: "medium",
+            width: "large",
+          }}
+          detail={true}
+          data={timeseriesData}
+          series={[
+            {
+              property: "date",
+              render: (val, datum, index) => new Date(val).toDateString(),
+            },
+            "count",
+          ]}
+          chart={[
+            {
+              property: "count",
+              type: "line",
+              opacity: "medium",
+              thickness: "xsmall",
+            },
+            {
+              property: "count",
+              type: "point",
+              point: "circle",
+              thickness: "xsmall",
+              round: true,
+            },
+          ]}
+          guide={{ x: { granularity: "fine" } }}
+          axis={{
+            x: {
+              property: "date",
+            },
+            y: {
+              property: "count",
+            },
+          }}
+        />
       </Box>
     </Box>
   );

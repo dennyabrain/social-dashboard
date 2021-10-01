@@ -6,14 +6,21 @@ import Home from "./Home";
 import Timeline from "./Timeline";
 import TimelineTweet from "./TimelineTweet";
 import Explore from "./Explore";
+import Theme from "./components/Theme";
+import { PlainLink } from "./components/Links";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <Grommet full>
-      <Box className="App" fill>
+    <Grommet theme={Theme} full>
+      <Box className="App" flex>
         <Box width={"800px"} alignSelf={"center"}>
+          <Box pad={"medium"}>
+            <PlainLink to={"/"}>
+              <Heading>FinDash</Heading>
+            </PlainLink>
+          </Box>
           <Box direction={"row"} gap={"small"} pad={"medium"}>
             <Link to="/">
               <Text size={"small"}>Home</Text>
