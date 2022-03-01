@@ -5,7 +5,7 @@ dotenv.config();
 const {
   mentionDataSchema,
   mentionIncludesSchema,
-} = require("./model/mentions-schema");
+} = require("./mentions-schema");
 
 async function testModelSaveWithLocalData() {
   const mentionTwitterResponse = require("./mentions.json");
@@ -41,15 +41,16 @@ async function testModelCreationWithRemoteData() {
     validData[i],
     validIncludes.users[i]
   );
-  for (model of dbModels) {
-    console.log(model.constructor.name, model.dataValues);
-  }
+  // for (model of dbModels) {
+  //   console.log(model.constructor.name, model.dataValues);
+  // }
+  // await save(dbModels);
 }
 
 (async function test() {
   try {
-    testModelSaveWithLocalData();
-    // testModelCreationWithRemoteData();
+    // testModelSaveWithLocalData();
+    testModelCreationWithRemoteData();
   } catch (err) {
     console.log("TESTS FAILED. ERROR validating user schema");
     console.log(err);
