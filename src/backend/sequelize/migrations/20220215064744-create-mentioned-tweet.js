@@ -9,12 +9,14 @@ module.exports = {
       },
       eTwitterId: {
         type: Sequelize.STRING,
+        allowNull: false,
       },
       eTwitterCreatedAt: {
         type: Sequelize.DATE,
       },
       text: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(1000),
+        allowNull: false,
       },
       lang: {
         type: Sequelize.STRING,

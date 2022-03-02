@@ -1,31 +1,30 @@
 "use strict";
 const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
-  class EntityHashtag extends Model {
+  class Error extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      EntityHashtag.belongsTo(models.Entity);
+      // define association here
     }
   }
-  EntityHashtag.init(
+  Error.init(
     {
       id: {
         primaryKey: true,
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,
       },
-      start: DataTypes.INTEGER,
-      end: DataTypes.INTEGER,
-      tag: DataTypes.STRING,
+      type: DataTypes.STRING,
+      message: DataTypes.STRING,
     },
     {
       sequelize,
-      modelName: "EntityHashtag",
+      modelName: "Error",
     }
   );
-  return EntityHashtag;
+  return Error;
 };

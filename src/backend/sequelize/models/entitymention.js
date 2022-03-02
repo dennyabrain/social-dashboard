@@ -13,6 +13,11 @@ module.exports = (sequelize, DataTypes) => {
   }
   EntityMention.init(
     {
+      id: {
+        primaryKey: true,
+        type: DataTypes.UUID,
+        defaultValue: DataTypes.UUIDV4,
+      },
       start: DataTypes.INTEGER,
       end: DataTypes.INTEGER,
       username: DataTypes.STRING,

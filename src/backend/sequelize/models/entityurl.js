@@ -13,6 +13,11 @@ module.exports = (sequelize, DataTypes) => {
   }
   EntityURL.init(
     {
+      id: {
+        primaryKey: true,
+        type: DataTypes.UUID,
+        defaultValue: DataTypes.UUIDV4,
+      },
       url: DataTypes.STRING,
       expandedURL: DataTypes.STRING,
       displayURL: DataTypes.STRING,
